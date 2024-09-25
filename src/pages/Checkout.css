@@ -1,0 +1,195 @@
+.checkout-container {
+  width: 90%;
+ 
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.checkout-container h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.checkout-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.checkout-summary {
+  flex: 2;
+ 
+  padding: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.checkout-summary h2 {
+  margin-bottom: 1rem;
+}
+
+.checkout-summary table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.checkout-summary th,
+.checkout-summary td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.checkout-summary th {
+  /* background-color: #f4f4f4; */
+  background-color: rgb(255, 243, 227);
+}
+
+
+
+
+
+
+
+.checkout-summary img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-right: 1rem;
+  
+
+}
+td .product-title{
+
+display: inline-block;
+margin-bottom: 40px;
+margin-left: 40px;
+}
+.checkout-summary .summary-total {
+  font-weight: bold;
+  text-align: right;
+}
+
+.checkout-form {
+  flex: 1;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.error {
+  color: red;
+  font-size: 0.875em;
+  margin-top: 0.25em;
+}
+
+.payment-methods {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.payment-methods label {
+  display: flex;
+  align-items: center;
+}
+
+.payment-methods input {
+  margin-right: 0.5rem;
+}
+
+.order-btn {
+  display: block;
+  width: 100%;
+ 
+  padding: 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(184, 142, 47);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+.order-btn:hover {
+ color: rgb(164, 122, 37);
+ background-color: #fff;
+  border: 1px solid rgb(184, 142, 47);
+} 
+
+
+
+@media (max-width: 768px) {
+  .checkout-content {
+    flex-direction: column-reverse;
+  }
+
+  .checkout-summary {
+    margin-bottom: 1rem;
+  }
+
+  .checkout-summary table {
+    display: block;
+    width: 100%;
+  }
+  .product-title-checkout{
+    margin-bottom: 10px;
+
+  }
+  .checkout-summary thead {
+    display: none; 
+  }
+
+  .checkout-summary tbody tr {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    justify-content: space-between; 
+  }
+
+  .checkout-summary td {
+    display: flex;
+    width: auto; 
+    padding: 0.5rem 0;
+    border: none;
+    justify-content: flex-end; 
+  }
+
+  .checkout-summary td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    width: 40%;
+    margin-right: 1rem;
+    text-align: left; /* Align the label text to the left */
+  }
+
+  .checkout-summary td img {
+    margin-right: 0.5rem;
+  }
+  td:nth-child(2)::before { content: "Price"; }
+    td:nth-child(3)::before { content: "Quantity"; }
+    td:nth-child(4)::before { content: "Subtotal"; }
+    td:nth-child(5)::before { content: "Action"; }
+}
+

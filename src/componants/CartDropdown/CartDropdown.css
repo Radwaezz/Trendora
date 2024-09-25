@@ -1,0 +1,294 @@
+/* Overall Wrapper for Side Menu and Overlay */
+.cart-wrapper {
+  position: relative;
+}
+
+/* Overlay Styling */
+.overlay {
+  position: fixed;
+  top: 7.8%;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2); 
+  z-index: 999; 
+}
+
+/* Side Menu Styling */
+.cart-side-menu {
+  position: fixed;
+  top: 10%;
+  right: 0;
+  width: 340px;
+  height: 80vh;
+  background-color: var(--color-white);
+  border-left: 1px solid var(--color-gray-3);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  z-index: 1000; /* Ensure it's above the overlay */
+  display: flex;
+  flex-direction: column;
+  transform: translateX(0);
+  transition: transform 0.3s ease-out;
+}
+
+/* Show the side menu when it's active */
+.cart-wrapper.active .cart-side-menu {
+  transform: translateX(0);
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: var(--color-gray-3);
+  cursor: pointer;
+  align-self: flex-end;
+  margin-bottom: 10px;
+  position: absolute;
+  top: 20%;
+  z-index: 1001;
+}
+.close-btn img {
+  margin-bottom: 50px;
+  margin-right: 20px;
+}
+hr {
+  margin-top: 20px;
+  width: 70%;
+  color: rgb(208, 201, 201);
+}
+
+.cart-items {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-top: 40px;
+}
+
+.cart-item {
+  display: flex;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+
+}
+.item-btn{
+  border: none;
+  background-color: rgb(235, 227, 227);
+  border-radius: 10px;
+  
+ 
+}
+.item-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: px;
+}
+
+.item-details {
+  flex-grow: 1;
+}
+
+.item-title {
+  font-size: 14px;
+  color: var(--font-color);
+  margin-top: 8px;
+}
+
+.item-quantity-price {
+  font-size: 12px;
+  color: var(--primary-color);
+  margin: 0;
+  margin-top: 8px;
+  gap: 10px;
+  display: flex;
+}
+
+.remove-item-btn {
+  width: 20px;
+  height: 20px;
+  border: none;
+  font-size: 16px;
+  color: var(--color-gray-4);
+  cursor: pointer;
+  background: none;
+  margin-top: 5px;
+}
+
+.cart-footer {
+  margin-top: auto;
+  text-align: center;
+}
+
+.subtotal {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  color: var(--font-color);
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  margin-right: 3px;
+  border-bottom: 1px solid var(--color-light-bg);
+}
+
+.subtotal span {
+  color: var(--primary-color);
+  margin-right: 100px;
+}
+
+.view-cart-btn {
+  width: 50%; /* Take full width */
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: var(--color-white);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.view-cart-btn:hover {
+  background-color: white;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+/* Empty Cart Styling */
+.empty-cart-message {
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+.link-cart {
+  color: rgb(164, 122, 37);
+}
+.empty-cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+.empty-cart-message {
+  font-size: 16px;
+  color: #555;
+}
+
+.link-cart {
+  color: rgb(185, 143, 50);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.link-cart:hover {
+  text-decoration: underline;
+}
+
+.empty-cart-image {
+  color: rgb(185, 143, 50);
+  width: 150px;
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+  .cart-side-menu {
+    width: 350px;
+    top: 12%;
+    height: 85vh;
+  }
+
+  .item-title {
+    font-size: 12px;
+  }
+
+  .item-quantity-price {
+    font-size: 11px;
+  }
+
+  .item-image {
+    margin-right: 5px;
+    width: 45px;
+    height: 45px;
+  }
+
+  .view-cart-btn {
+    width: 50%; /* Full width button */
+    margin-left: 0;
+  }
+
+  .subtotal {
+    margin-right: 0;
+    justify-content: space-between;
+    font-size: 14px;
+  }
+
+  .subtotal span {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further adjustments for very small screens */
+  .item-title {
+    font-size: 12px;
+    margin-left: 14px;
+    line-height: 17px;
+    margin: 0 auto;
+  }
+
+  .item-quantity-price {
+    font-size: 11px;
+  }
+
+  .item-image {
+    margin-left: 6px;
+  }
+.remove-item-btn{
+  margin-top: 18px;
+}
+  .item-btn {
+    background-color: white;
+    border: none;
+    margin-left: 10px;
+  }
+
+  .pricey {
+    margin-left: 10px;
+  }
+.item-details span{
+  margin-left: 13px;
+}
+  .subtotal {
+    margin-left: 30px;
+    margin-top: 10px;
+  }
+
+  .subtotal span {
+    margin-left: 10px;
+  }
+
+  .view-cart-btn {
+    font-size: 14px;
+    margin-left: 30px;
+  }
+
+  .cart-title {
+    margin-left: 35px;
+  }
+
+  .cart-side-menu {
+    height: auto;
+  }
+
+  .empty-cart-image {
+    width: 100px;
+  }
+
+  .empty-cart-message {
+    margin-bottom: 25px;
+  }
+}

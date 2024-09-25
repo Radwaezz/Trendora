@@ -1,0 +1,160 @@
+
+   .about-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    /* background-color: #f8f5f0; */
+  }
+  
+  .info-section {
+    flex: 1;
+    padding-right: 20px;
+  }
+  
+  h1 {
+    font-size: 36px;
+    color: #4b4b4b;
+  }
+  
+  p {
+    color: #787878;
+    margin-bottom: 20px;
+  }
+  
+  .explore-button {
+    background-color: #d4a052;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  /* Carousel */
+  .carousel-section {
+    flex: 1;
+    position: relative;
+  }
+  
+  .carousel {
+    position: relative;
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  .carousel-item {
+    position: relative;
+    text-align: center;
+  }
+  
+  .carousel img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  
+  .carousel-info {
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .carousel-info p {
+    margin: 0;
+    font-size: 12px;
+  }
+  
+  .carousel-info h3 {
+    margin-top: 5px;
+  }
+  
+  /* Dots for navigation */
+  .carousel-dots {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .carousel-dots span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: rgb(223, 217, 210);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .carousel-dots .active {
+    background-color: #4b4b4b;
+  }
+  
+  /* Media Queries for responsiveness */
+  
+  /* For screens smaller than 768px (tablets, small laptops) */
+  @media (max-width: 768px) {
+    .about-section {
+      flex-direction: column;  /* Stack the content vertically */
+      padding: 20px;
+    }
+  
+    .info-section {
+      padding-right: 0;
+      text-align: center;  /* Center-align text */
+    }
+  
+    h1 {
+      font-size: 28px;  /* Smaller font size for heading */
+    }
+  
+    .explore-button {
+      width: 100%;  /* Make the button full width */
+      padding: 10px;
+      font-size: 14px;
+    }
+  
+    .carousel {
+      max-width: 300px;  /* Reduce the carousel size */
+    }
+  }
+  
+  /* For screens smaller than 480px (mobile phones) */
+  @media (max-width: 480px) {
+    .about-section {
+      padding: 10px;
+    }
+  
+    h1 {
+      font-size: 24px;
+    }
+  
+    p {
+      font-size: 14px;
+    }
+  
+    .explore-button {
+      font-size: 12px;
+      padding: 8px;
+    }
+  
+    .carousel {
+      max-width: 100%;
+    }
+  
+    .carousel img {
+      max-width: 100%;  
+    }
+  
+    .carousel-info {
+      bottom: 10px;
+      padding: 8px;
+    }
+  
+    .carousel-dots span {
+      width: 8px;
+      height: 8px;
+    }
+  }
+  

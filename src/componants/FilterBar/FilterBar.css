@@ -1,0 +1,127 @@
+.filter-section {
+    background-color: #f9ebde; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.filter-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-icons i {
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column; 
+    width: calc(50% - 10px); 
+    margin-bottom: 15px; 
+}
+
+.dropdown-select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: white;
+    color: #333;
+}
+
+.show-short {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.show-short select {
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: white;
+}
+
+.dropdown-select:hover, .show-short select:hover {
+    border-color: rgb(184, 142, 47);
+}
+
+.results-info {
+    font-size: 14px;
+    color: #777;
+}
+
+@media (max-width: 600px) {
+    .filter-section {
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+
+    .filter-icons {
+        justify-content: flex-start;
+        margin-bottom: 10px; 
+    }
+
+    .input-group {
+        width: calc(50% - 10px); 
+    }
+
+    .dropdown-select,
+    .show-short select {
+        width: 100%; 
+        height: 30px; 
+        font-size: 12px; 
+    }
+
+    .results-info {
+        font-size: 12px; 
+    }
+
+    .show-short span {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 900px) and (min-width: 601px) {
+    .filter-section {
+        flex-direction: row; 
+        flex-wrap: wrap; 
+        justify-content: flex-start; 
+    }
+
+    .filter-icons {
+        justify-content: flex-start; 
+        margin-bottom: 10px; 
+    }
+
+    .input-group {
+        width: auto; 
+        margin-bottom: 15px; 
+        display: flex; 
+        gap: 10px; 
+    }
+
+    .dropdown-select,
+    .show-short select {
+        width: auto; 
+        height: 30px; 
+        font-size: 12px; 
+    }
+
+    .results-info {
+        font-size: 12px;
+    }
+
+    .show-short span {
+        margin-top: 10px;
+    }
+}

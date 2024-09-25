@@ -1,0 +1,117 @@
+/* Main container styles */
+.placeholder-place-order {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Checkout box styling */
+.placeholder-checkout {
+  width: 400px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s; 
+}
+
+/* Hover effect on checkout box */
+.placeholder-checkout:hover {
+  transform: translateY(-5px); 
+}
+
+/* Heading styles */
+h1 {
+  font-size: 24px;
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Form group styling */
+.placeholder-form-group {
+  margin-bottom: 20px;
+}
+
+/* Label styles */
+label {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* Input and select field styling */
+.placeholder-card-element {
+  width: 100%; 
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fafafa;
+  transition: border-color 0.3s; 
+}
+
+/* Focus state for input/select fields */
+.placeholder-card-element:focus {
+  border-color: #28a745; 
+  outline: none; 
+}
+
+/* Button styling */
+.placeholder-button {
+  width: 100%;
+  padding: 12px;
+  background-color:  rgb(184, 142, 47);
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+
+
+
+.placeholder-button:hover {
+  transform: translateY(1px); 
+  background-color: white;
+  color:rgb(184, 142, 47) ;
+  border: 1px solid rgb(184, 142, 47);
+}
+
+/* Order summary section styling */
+.order-summary {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: rgb(249, 235, 222); 
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Order summary title */
+.order-summary h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Order summary text */
+.order-summary p {
+  font-size: 16px;
+  color: #555;
+}
+.back-to-shop-button {
+  margin-top: 20px; 
+  background-color:white ; 
+  color:rgb(184, 142, 47) ;
+}
+
+.back-to-shop-button:hover {
+
+  border: none;
+  scale:1.1;
+}

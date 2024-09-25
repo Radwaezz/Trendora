@@ -1,0 +1,308 @@
+/* Base Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  list-style: none;
+  text-decoration: none;
+  color: black;
+
+}
+
+.logo-img {
+  width: 45px;
+  height: 45px;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: black;
+}
+
+/* Navigation Links */
+.nav-links ,.initial-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 20px;
+}
+.initial-links {
+  margin-right: 200px;
+
+}
+.nav-links li {
+  margin: 0 1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: rgb(185, 143, 50);
+}
+.initial-links a.active {
+  color: rgb(185, 143, 50); 
+}
+
+
+.cart {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: rgb(185, 143, 50);
+  color: #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.cart-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 3000;
+  background: white;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .nav-links {
+
+   margin-right: 20px;
+  }
+  .initial-links {
+    margin-right: 20px;
+   
+  }
+}
+
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .logo {
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-left: 40px;
+  }
+
+  .logo-img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    z-index: 2000;
+  }
+
+  .nav-links.nav-active {
+    max-height: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+ 
+
+  .nav-links li {
+    margin: 1rem 0;
+  }
+
+  .cart-dropdown {
+    position: fixed;
+    top: 60px;
+    right: 10px;
+  }
+}
+
+/* Wishlist icon */
+.wishlist img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* Wishlist and cart spacing */
+.wishlist {
+  position: relative;
+  margin-left: 10px;
+}
+
+.likes-count {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: red;
+  color: #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+/* Additional styles for X button */
+.nav-toggle.active {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: black;
+  z-index: 3000;
+}
+
+
+/* Base Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.logo-img {
+  width: 45px;
+  height: 45px;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: black;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -100%; 
+  width: 300px;
+  height: 100%;
+  background-color: white;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  transition: right 0.3s ease;
+  z-index: 2000;
+  
+}
+
+.sidebar-active {
+  right: 0; 
+ 
+}
+
+.sidebar-links {
+  list-style: none;
+  padding: 2rem 2rem;
+
+}
+
+.sidebar-links li {
+
+  margin: 3rem 0;
+}
+
+.sidebar-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  transition: color 0.3s;
+  
+}
+
+.sidebar-links a:hover {
+  color: rgb(185, 143, 50);
+}
+
+.close-btn {
+  position: absolute;
+  top: .5rem; 
+  right: 1rem; 
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none; 
+  }
+}
+@media (max-width: 900px){
+  /* .logo  {
+    margin-left: 20px;
+    transform: translateX(-12px);
+  } */
+  .nav-toggle{
+    margin-right: 20px;
+  }
+  .logo{
+    font-size: 1.4rem;
+  }
+   .trendaro{
+    transform: translateX(-45px);
+   }
+}

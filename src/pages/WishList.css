@@ -1,0 +1,116 @@
+/* Base Styles */
+.wishlist-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fdf4e8; 
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto; 
+  }
+  
+  /* Image styles */
+  .item-image img {
+    width: 70px; 
+    height: 70px; 
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  .wishlist-title{
+    text-align: center;
+   
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  /* Product details */
+  .item-details {
+    flex-grow: 1; 
+    margin-left: 20px;
+    font-size: 1rem;
+    font-weight: 600; 
+    color: #333;
+  }
+  
+  .item-details span {
+    font-weight: normal;
+    color: #666; 
+  }
+  
+  /* Remove button styles */
+  .item-remove .remove-btn {
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+   /* Hover effect for the remove button */
+   .item-remove .remove-btn:hover {
+    color: #ff4d4d; 
+  }
+  
+  /* Empty wishlist message */
+  .empty-message{
+    text-align: center;
+    font-size: 2.5rem;
+    color:rgb(184, 142, 47);
+    margin-top: 20px;
+  }
+  .go-shop-btn{
+    background-color:rgb(184, 142, 47) ;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    width: 250px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 20px;
+   
+  }
+  .go-shop-btn:hover{
+    background-color: white;
+    color:rgb(184, 142, 47);
+    border: 1px solid rgb(184, 142, 47);
+  }
+  .go-shop-container{
+    text-align: center;
+    margin-top: 20px;
+  }
+  .go-shop-message{
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+ .quote{
+    font-size: 1.5rem;
+    color:rgb(184, 142, 47);
+    font-size:2.5rem ;
+  
+ }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .wishlist-item {
+      flex-direction: column; 
+      align-items: flex-start;
+    }
+  
+    .item-image img {
+      width: 50px;
+      height: 50px;
+    }
+  
+    .item-details {
+      margin: 10px 0;
+    }
+  
+    .item-remove {
+      align-self: flex-end;
+    }
+  }
+  

@@ -1,0 +1,255 @@
+/* General styles for container and cart items */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.cart-items {
+    flex: 1;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.cart-totals {
+    width: 300px;
+    background-color: #f9f5f0;
+    padding: 30px;
+    border-radius: 8px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.cart-totals h2 {
+    text-align: center;
+}
+
+.cart-totals p {
+    margin-top: 20px;
+    margin-left: 30px;
+    font-size: 14px;
+}
+
+.cart-totals span {
+    margin-left: 50px;
+}
+
+.cart-totals .total-price {
+    color: rgb(164, 122, 37);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+th, td {
+    text-align: center;
+    width: 70%;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.quantity-td {
+    border: 1px solid rgb(164, 122, 37);
+    width: 15px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 4px;
+    margin-top: 30px;
+    margin-left: 27px;
+}
+
+.quantity-td:hover {
+    background-color: rgb(164, 122, 37);
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.quantity-td span {
+    font-size: 16px;
+}
+
+th {
+    background-color: #f9f5f0;
+}
+
+.product-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.product-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.quantity-input {
+    width: 50px;
+    text-align: center;
+}
+
+.update-btn {
+    background-color: rgb(184, 142, 47);
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.checkout-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(184, 142, 47);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.checkout-btn:hover {
+    background-color: white;
+    color: rgb(164, 122, 37);
+    border: 1px solid rgb(164, 122, 37);
+}
+
+.delete-icon {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0.8);
+    transition: all 0.3s ease-in-out;
+}
+.back-to-shop-btn {
+    background-color: transparent; 
+    color:  rgb(164, 122, 37); 
+    border: none; 
+    border-radius: 4px; 
+    padding: 10px 20px;
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+    text-align: center; 
+    display: inline-block; 
+    text-decoration: none; 
+    margin-top: 20px; 
+    transition: all 0.3s ease-in-out;
+  }
+  .back-to-shop-btn:hover {
+    background-color: rgb(164, 122, 37);
+    color: white;
+    transform: scale(1.05);
+  }
+/* Responsive Styles */
+
+/* Small Screens */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+      
+    }
+
+    .cart-totals {
+        width: 100%;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+
+    .cart-items {
+        width: 100%;
+        padding: 10px;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tbody tr {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid #ddd;
+        gap: 20px;
+    }
+    .product-name{
+        order: 1;
+    }
+    .product-image{
+        order: 2;
+    }
+.quantity-td{
+    margin-left: 30px;
+}
+    td {
+        text-align: left;
+        padding-left: 50%;
+        position: relative;
+        border: none;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+    }
+
+    td:nth-child(1)::before {
+        content: "Product";
+    }
+
+    .quantity-td {
+        border: none;
+        position: relative;
+        right: 10%;
+    }
+
+    td:nth-child(2)::before { content: "Price"; }
+    td:nth-child(3)::before { content: "Quantity"; }
+    td:nth-child(4)::before { content: "Subtotal"; }
+    td:nth-child(5)::before { content: "Action"; }
+}
+
+/* Medium Screens */
+@media (min-width: 769px) and (max-width: 900px) {
+    .container {
+        /* flex-direction: column; */
+    }
+
+    .cart-items {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .cart-totals {
+        width: 100%;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+
+    table {
+        display: table;
+        margin-bottom: 20px;
+    }
+
+    th, td {
+        width: auto;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+}

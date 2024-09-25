@@ -1,0 +1,115 @@
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start;
+    padding: 40px 20px;
+    background-color: #f9f4ed;
+    flex-wrap: wrap; 
+    margin-top: 30px;
+  
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    min-width: 200px;
+    max-width: 400px;
+    flex: 1; 
+    margin-left: 50px;
+  
+}
+
+/* Feature image and text styling */
+.feature img {
+    width: 52.94px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+.feature h4 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.feature p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Responsive adjustments */
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .feature {
+        flex-basis: 45%; 
+        margin-bottom: 20px; 
+    }
+
+    .feature {
+        justify-content: center;
+        flex-basis: 45%; 
+        margin-bottom: 20px;
+        text-align: center; 
+        flex-direction: row; 
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .features {
+        display: grid; 
+        grid-template-columns: 1fr 1fr;
+        gap: 15px; /* Reduced gap between items */
+    }
+
+    .feature {
+        justify-content: center;
+        text-align: center; 
+        flex-direction: row; 
+        align-items: center;
+        margin-bottom: 10px; /* Reduce margin bottom */
+    }
+}
+
+@media (max-width: 480px) {
+    .features {
+        grid-template-columns: 1fr; 
+    }
+
+    .feature {
+        justify-content: center; 
+        text-align: center;
+        font-size: 10px;
+        width: 100%;
+        position: relative;
+        left: 0; /* Resetting left to 0 to align better */
+        margin-bottom: 5px; /* Reduce margin between features */
+        order: -1; /* Reverse the order of features */
+    }
+
+    .feature img {
+        margin-right: 5px; /* Decrease right margin to bring text closer */
+        width: 30px;
+        height: 30px;
+    }
+
+    .feature h4, .feature p {
+        text-align: left; /* Align text to the left */
+    }
+
+    /* Adjusting spacing for the first feature */
+    .feature:first-child {
+        margin-left: 10px; /* Bring text of the first feature closer to the image */
+    }
+
+    .feature:nth-child(3), .feature:nth-child(4) {
+        transform: translateX(-50px); 
+    }
+    .feature:nth-child(2){
+        transform: translateX(-30px); 
+    }
+    .feature:nth-child(1){
+        transform: translateX(13px); 
+    }
+}

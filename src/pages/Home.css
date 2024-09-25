@@ -1,0 +1,173 @@
+
+body, h2, h3, h4, p, ul {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    font-family: Inter, sans-serif;
+
+    background-color: #fff;
+
+}
+
+/* Categories Section */
+.categories {
+    text-align: center;
+    padding: 40px 20px;
+    /* max-width: 1183px;
+    height: 665.44px; */
+    margin: 0 auto;
+    margin-top: 50px;
+    /* background-color: aqua; */
+}
+
+.categories h2 {
+    font-size: 24px;
+    margin-bottom: 70px;
+    font-weight: bold;
+}
+
+.category-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.category-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 200px;
+    max-width: 250px;
+    min-height: 350px; 
+}
+
+.category-card:hover {
+    transform: scale(1.05); 
+}
+
+.category-card img {
+    width: 100%;
+    flex-grow: 1;
+    object-fit: cover;
+    height: 300px;
+}
+
+.category-card h3 {
+    font-size: 14px;
+    padding: 10px;
+    background-color: #fff;
+    color:rgb(76, 76, 76);
+   
+
+  
+    margin: 0;
+    text-transform: capitalize;
+    margin-top: 10px;
+    flex-grow: 0; 
+    height: 50px; 
+}
+
+@media (max-width: 1200px) {
+    .categories {
+        padding: 30px 15px;
+    }
+
+    .categories h2 {
+        font-size: 22px;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 992px) {
+    .category-container {
+        justify-content: space-around;
+    }
+
+    .category-card {
+        min-width: 180px;
+        max-width: 220px;
+    }
+
+    .categories h2 {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+
+ 
+    .category-card img {
+        object-fit: contain; 
+        height: auto; 
+        max-height: 300px; 
+    }
+}
+
+/* Responsive styles for small screens (like tablets) */
+@media (max-width: 768px) {
+    .category-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px; 
+    }
+
+    .category-card {
+        min-width: 100%; 
+        max-width: 100%;
+    }
+
+    .categories h2 {
+        font-size: 18px;
+        margin-bottom: 25px;
+    }
+}
+
+/* Responsive styles for mobile screens */
+@media (max-width: 576px) {
+    .categories {
+        padding: 20px 10px;
+    }
+
+    .category-card {
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .categories h2 {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .category-card h3 {
+        font-size: 16px;
+        height: auto; 
+    }
+}
+
+/* Additional tweaks for extra small screens (below 400px) */
+@media (max-width: 400px) {
+    .categories h2 {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .category-card h3 {
+        font-size: 14px;
+        padding: 8px;
+        height: auto; /* Adjust the height on extra small screens */
+    }
+
+    .category-container {
+        gap: 15px; /* Smaller gap on extra small screens */
+    }
+}
