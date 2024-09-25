@@ -21,7 +21,7 @@ import Shop from './pages/Shop';
 import Checkout from './pages/Checkout';
 import About from './pages/About';
 import LogIn from './auth/login/LogIn';
-import Signup from './auth/signup/Signup';
+// import Signup from './auth/signup/Signup';
 
 
 
@@ -49,7 +49,7 @@ function App() {
        
         <Route path="/login" element={<LogIn />} />
        
-        <Route path="/signup" element={<Signup />} />
+        {/* <Route path="/signup" element={<Signup />} /> */}
 
       </Routes>
       <Quality /> {/* Header placed above the Footer */}

@@ -1,4 +1,4 @@
-.auth-container {
+/* .auth-container {
     position: relative;
     width: 100%;
     min-height: 100vh;
@@ -16,7 +16,7 @@
     margin: 2rem;
   }
   
-  /* Image container */
+  
   .auth-image {
     background-image: url('../../public/images/home-hero-bg-887bfdde.png');
     background-size: cover;
@@ -27,7 +27,7 @@
     width: 50%; 
   }
   
-  /* Form wrapper */
+  
   .auth-form-section {
     display: flex;
     flex-direction: column;
@@ -56,7 +56,6 @@
     padding: 2rem;
   }
   
-  /* Responsive styling */
   @media (max-width: 768px) {
     .auth-content {
       flex-direction: column;
@@ -122,4 +121,4 @@
     color: #b8860b;
     border: 1px solid #b8860b;
   }
-  
+   */
