@@ -15,21 +15,15 @@ import HeaderWithImage from './componants/HeaderWithImage';
 import Quality from './layouts/Quality/Quality';
 import ScrollToTopButton from './componants/ScrollToTopButton';
 import { ToastContainer } from 'react-toastify';
-
 import PlaceOrder from './pages/PlaceOrder';
-
-
-import SignUp from './auth/signup/SignUp';
-
 import WishList from './pages/WishList';
 import Shop from './pages/Shop';
 import Checkout from './pages/Checkout';
 import About from './pages/About';
 import LogIn from './auth/login/LogIn';
+import Signup from './auth/signup/Signup';
 
 
-
-// import About from './pages/about';
 
 function App() {
   return (
@@ -54,7 +48,9 @@ function App() {
 
        
         <Route path="/login" element={<LogIn />} />
-        <Route path="/signup" element={<SignUp />} />
+       
+        <Route path="/signup" element={<Signup />} />
+
       </Routes>
       <Quality /> {/* Header placed above the Footer */}
       <Footer />

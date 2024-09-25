@@ -1,21 +1,21 @@
 
-
 import './LogIn.css';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom'; // Import Link
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import logIn from '../../../public/images/home-hero-bg-887bfdde.png'
+import logIn from '../../../public/images/home-hero-bg-887bfdde.png';
 
 // Define validation schema using Yup
 const validationSchema = Yup.object({
- 
   email: Yup.string()
     .matches(
       /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
       "Invalid email address"
     )
     .required("Email is Required"),
-  password: Yup.string().min(6, 'Password must be at least 6 characters').required('Password is required'),
+  password: Yup.string()
+    .min(6, 'Password must be at least 6 characters')
+    .required('Password is required'),
 });
 
 function LogIn() {
@@ -77,7 +77,9 @@ function LogIn() {
           </Formik>
 
           <div className="login-signup-link">
-            <p className="login-paragraph">Don’t have an account? <a href="/signup">Signup</a></p>
+            <p className="login-paragraph">
+              Don’t have an account? <Link to="/signup">Signup</Link> 
+            </p>
           </div>
         </div>
       </div>
