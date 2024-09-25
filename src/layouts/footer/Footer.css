@@ -121,14 +121,14 @@ body, h2, h3, p, ul, address, form {
         text-align: center;
     }
     .footer-column button {
-        transform: translateX(-26%);
+        transform: translateX(-15%);
       
       
     }
     .footer-column input{
       
         margin-top: 5px;
-        transform: translateX(-17%);
+        transform: translateX(-6%);
        
     }
 }
