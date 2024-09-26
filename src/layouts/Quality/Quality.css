@@ -83,24 +83,26 @@
         font-size: 10px;
         width: 100%;
         position: relative;
-        left: 0; /* Resetting left to 0 to align better */
-        margin-bottom: 5px; /* Reduce margin between features */
-        order: -1; /* Reverse the order of features */
+        left: 0; 
+        margin-bottom: 5px; 
+        /* order: -1;  */
     }
 
     .feature img {
         margin-right: 5px; /* Decrease right margin to bring text closer */
-        width: 30px;
-        height: 30px;
+        width: 40px;
+        height: 40px;
+       transform: translateY(-10px);
+        
     }
 
     .feature h4, .feature p {
-        text-align: left; /* Align text to the left */
+        text-align: left; 
     }
 
     /* Adjusting spacing for the first feature */
     .feature:first-child {
-        margin-left: 10px; /* Bring text of the first feature closer to the image */
+        margin-left: 10px; 
     }
 
     .feature:nth-child(3), .feature:nth-child(4) {
@@ -111,5 +113,18 @@
     }
     .feature:nth-child(1){
         transform: translateX(13px); 
+    }
+    .feature:nth-child(1){
+        order: 4;
+    }
+   
+    .feature:nth-child(2){
+        order: 3;
+    }
+    .feature:nth-child(3){
+        order: 2;
+    }
+    .feature:nth-child(4){
+        order: 1;
     }
 }

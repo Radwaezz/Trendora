@@ -97,7 +97,7 @@ function CartDropdown({ onClose }) {
         variants={sidebarVariants}
       >
         <button className="close-btn" onClick={onClose}>
-          <img src={Delete} alt="Close" />
+          <img  src={Delete} alt="Close" />
         </button>
         <h3 className='cart-title'>Shopping Cart</h3>
         <p className="item-counter">Total Items: {totalItems}</p> {/* Item counter added */}

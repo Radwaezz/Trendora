@@ -19,7 +19,7 @@
   position: fixed;
   top: 10%;
   right: 0;
-  width: 340px;
+  width: 300px;
   height: 80vh;
  
   background-color: var(--color-white);
@@ -77,6 +77,7 @@ hr {
   border: none;
   background-color: white;
   border-radius: 10px;
+  margin-bottom: 40px;
   
  
 }
@@ -84,7 +85,7 @@ hr {
   width: 50px;
   height: 50px;
   object-fit: cover;
-  margin-right: px;
+  /* margin-right: 50px; */
 }
 
 .item-details {
@@ -136,12 +137,12 @@ hr {
   background-color: rgb(235, 227, 227);
   color: var(--color-white);
   border: none;
-  border-radius: 5px; /* Round the corners */
-  width: 40px; /* Adjust width to fit your design */
+  border-radius: 5px; 
+  width: 40px; 
   text-align: center;
-  cursor: default; /* No pointer cursor for the counter */
-  margin: 0 5px; /* Add some space between buttons */
-  font-weight: bold; /* Make the text bold */
+  cursor: default; 
+  margin: 0 5px; 
+  font-weight: bold; 
   color: var(--primary-color);
  
 }
@@ -244,11 +245,7 @@ hr {
 
 /* Media Query for Responsiveness */
 @media (min-width: 1200px) {
-  /* .overlay {
-    position: fixed;
-    top: 10%;
-   
-  } */
+ 
   .cart-side-menu {
     position: fixed;
     top: 11%;
@@ -258,6 +255,7 @@ hr {
    
   }
 }
+
 @media (max-width: 768px) {
   .cart-side-menu {
     width: 350px;
@@ -265,7 +263,9 @@ hr {
     height: 85vh;
  
   }
-
+  .cart-side-menu {
+    width: 300px;
+  }
 
   .item-title {
     font-size: 12px;
@@ -357,5 +357,13 @@ hr {
 
   .empty-cart-message {
     margin-bottom: 25px;
+  }
+  .item-counter{
+    /* text-align: center; */
+    margin-left: 35px;
+    margin-top: 20px;
+  }
+  .cart-side-menu {
+    width: 300px;
   }
 }
