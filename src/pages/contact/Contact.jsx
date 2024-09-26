@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from 'react';
 import * as Yup from 'yup';
-import Address from '../../public/icons/adress-b49e9cef.svg';
-import Phone from '../../public/icons/phone-13011fed.svg';
-import Time from '../../public/icons/clock-852d044e (1).svg';
+import Address from '/icons/adress-b49e9cef.svg';
+import Phone from '/icons/phone-13011fed.svg';
+import Time from '/icons/clock-852d044e (1).svg';
 import './Contact.css';
 
 // Validation schema

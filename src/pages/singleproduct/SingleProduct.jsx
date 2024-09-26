@@ -1,11 +1,11 @@
 
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import useCartStore from '../store/useCartStore';
-import Counter from '../componants/Counter/Counter';
+import useCartStore from '../../store/useCartStore';
+import Counter from '../../componants/Counter/Counter';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import CartDropdown from '../componants/CartDropdown/CartDropdown'; // Import CartDropdown
+import CartDropdown from '../../componants/CartDropdown/CartDropdown'; // Import CartDropdown
 import './SingleProduct.css';
 
 // Modal Component

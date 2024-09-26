@@ -3,9 +3,9 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import useCartStore from "../../store/useCartStore";
 import CartDropdown from "../../componants/CartDropdown/CartDropdown";
-import logo from "../../../public/images/furniro.png";
-import LogIn from "../../../public/icons/user-24fb1f8e.svg";
-import Favorites from "../../../public/icons/heart-empty.svg";
+import logo from "/images/furniro.png";
+import LogIn from "/icons/user-24fb1f8e.svg";
+import Favorites from "/icons/heart-empty.svg";
 import "./Navbar.css";
 
 function Navbar() {

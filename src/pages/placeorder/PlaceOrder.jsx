@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import useCartStore from '../store/useCartStore';
+import useCartStore from '../../store/useCartStore';
 import './PlaceOrder.css';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';

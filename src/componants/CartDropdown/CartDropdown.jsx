@@ -1,16 +1,20 @@
 
+
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import useCartStore from '../../store/useCartStore';
-import Delete from '../../../public/icons/cart-modal-close-icon-3f317b22.svg';
-import EmptyCartImage from '../../../public/images/shopping-removebg-preview.png';
+import Delete from '/icons/cart-modal-close-icon-3f317b22.svg';
+import EmptyCartImage from '/images/shopping-removebg-preview.png';
 import { motion } from 'framer-motion'; 
 import './CartDropdown.css';
 
 function CartDropdown({ onClose }) {
   const navigate = useNavigate();
-  const { cart, cartTotalPrice, removeFromCart } = useCartStore();
+  const { cart, cartTotalPrice, removeFromCart, updateItemQuantity } = useCartStore();
   const totalPrice = cartTotalPrice();
+  
+  // Calculate the total number of items in the cart
+  const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
 
   const handleViewCartClick = () => {
     navigate('/cart');
@@ -30,6 +34,14 @@ function CartDropdown({ onClose }) {
       pauseOnHover: false,
       draggable: true,
     });
+  };
+
+  const handleIncreaseQuantity = (id) => {
+    updateItemQuantity(id, 1); // Increase quantity by 1
+  };
+
+  const handleDecreaseQuantity = (id) => {
+    updateItemQuantity(id, -1); // Decrease quantity by 1
   };
 
   // Animation variants for sidebar
@@ -88,6 +100,7 @@ function CartDropdown({ onClose }) {
           <img src={Delete} alt="Close" />
         </button>
         <h3 className='cart-title'>Shopping Cart</h3>
+        <p className="item-counter">Total Items: {totalItems}</p> {/* Item counter added */}
         <hr />
         {cart.length === 0 ? (
           <div className="empty-cart">
@@ -112,6 +125,12 @@ function CartDropdown({ onClose }) {
                     <span className="quantityy">{item.quantity}</span>
                     <span className="pricey">x</span>${item.price ? item.price.toFixed(2) : '0.00'}
                   </p>
+                 
+                  <div className="quantity-controls">
+      <button className="quantity-btn" onClick={() => handleDecreaseQuantity(item.id)} disabled={item.quantity <= 1}>-</button>
+      <button className="quantity-display">{item.quantity}</button>
+     <button className='quantity-btn' onClick={() => handleIncreaseQuantity(item.id)}>+</button>
+   </div>
                 </div>
                 <button
                   className="remove-item-btn"
@@ -137,4 +156,3 @@ function CartDropdown({ onClose }) {
 }
 
 export default CartDropdown;
-

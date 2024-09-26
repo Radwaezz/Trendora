@@ -5,6 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './SignUp.css';
 import { Link } from 'react-router-dom';
+import signUpImage from '/images/home-hero-bg-887bfdde.png';
 
 function SignUp() {
   // Yup validation schema
@@ -27,7 +28,7 @@ function SignUp() {
     <div className="auth-container">
       <div className="auth-content">
         <div className="auth-image">
-          {/* Background image is handled via CSS */}
+         <img src={signUpImage} alt=" Sign Up" />
         </div>
         <div className="auth-form-section">
           <div className="auth-form-wrapper">

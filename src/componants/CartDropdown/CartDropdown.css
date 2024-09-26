@@ -21,6 +21,7 @@
   right: 0;
   width: 340px;
   height: 80vh;
+ 
   background-color: var(--color-white);
   border-left: 1px solid var(--color-gray-3);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -50,7 +51,8 @@
   z-index: 1001;
 }
 .close-btn img {
-  margin-bottom: 50px;
+  margin-top: 8px;
+
   margin-right: 20px;
 }
 hr {
@@ -73,7 +75,7 @@ hr {
 }
 .item-btn{
   border: none;
-  background-color: rgb(235, 227, 227);
+  background-color: white;
   border-radius: 10px;
   
  
@@ -115,6 +117,52 @@ hr {
   margin-top: 5px;
 }
 
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  /* background-color: var(--primary-color) */
+  background-color: rgb(235, 227, 227);
+  border-radius: 5px;
+  width: 100px;
+  
+}
+.item-counter{
+  margin-left: 3px;
+  margin-top: 10px;
+}
+.quantity-display {
+  /* background-color: var(--primary-color);  */
+  background-color: rgb(235, 227, 227);
+  color: var(--color-white);
+  border: none;
+  border-radius: 5px; /* Round the corners */
+  width: 40px; /* Adjust width to fit your design */
+  text-align: center;
+  cursor: default; /* No pointer cursor for the counter */
+  margin: 0 5px; /* Add some space between buttons */
+  font-weight: bold; /* Make the text bold */
+  color: var(--primary-color);
+ 
+}
+
+.quantity-display:hover {
+  background-color: darken(var(--primary-color), 10%); 
+}
+
+.quantity-controls .quantity-btn {
+  background-color: rgb(235, 227, 227);
+  border: none;
+  border-radius: 5px; /* Round corners for buttons */
+  padding: 5px 10px; /* Padding for buttons */
+  cursor: pointer; /* Pointer cursor for buttons */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.quantity-controls .quantity-btn:hover {
+  background-color: rgb(210, 210, 210); 
+}
+
 .cart-footer {
   margin-top: auto;
   text-align: center;
@@ -126,7 +174,8 @@ hr {
   font-weight: bold;
   color: var(--font-color);
   padding-bottom: 10px;
-  margin-bottom: 15px;
+  /* margin-bottom: 20px; */
+  margin-top: 20px;
   margin-right: 3px;
   border-bottom: 1px solid var(--color-light-bg);
 }
@@ -194,12 +243,29 @@ hr {
 }
 
 /* Media Query for Responsiveness */
+@media (min-width: 1200px) {
+  /* .overlay {
+    position: fixed;
+    top: 10%;
+   
+  } */
+  .cart-side-menu {
+    position: fixed;
+    top: 11%;
+    right: 0;
+    width: 340px;
+    height: 80vh;
+   
+  }
+}
 @media (max-width: 768px) {
   .cart-side-menu {
     width: 350px;
     top: 12%;
     height: 85vh;
+ 
   }
+
 
   .item-title {
     font-size: 12px;
@@ -263,17 +329,18 @@ hr {
   margin-left: 13px;
 }
   .subtotal {
-    margin-left: 30px;
+    margin-left: 35px;
     margin-top: 10px;
   }
 
   .subtotal span {
     margin-left: 10px;
   }
+  
 
   .view-cart-btn {
     font-size: 14px;
-    margin-left: 30px;
+    margin-left: 35px;
   }
 
   .cart-title {

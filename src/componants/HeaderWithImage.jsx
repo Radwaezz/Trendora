@@ -2,11 +2,11 @@
 import { useLocation, Link } from 'react-router-dom';
 import Header from '../layouts/header/Header'; 
 
-import homeImage from '../../public/images/home-hero-bg-887bfdde.png';
-import shopImage from '../../public/images/shop-top.png';
-import productImage from '../../public/images/shop-top.png';
-import contactImage from '../../public/images/shop-top.png';
-import logoImage from '../../public/images/furniro.png'; 
+import homeImage from '/images/home-hero-bg-887bfdde.png';
+import shopImage from '/images/shop-top.png';
+import productImage from '/images/shop-top.png';
+import contactImage from '/images/shop-top.png';
+import logoImage from '/images/furniro.png'; 
 
 function HeaderWithImage() {
   const location = useLocation();

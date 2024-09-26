@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import FilterIcon from '../../../public/icons/filter-icon-ae3ca08c.svg';
+import FilterIcon from '/icons/filter-icon-ae3ca08c.svg';
 import './FilterBar.css';
 import PropTypes from 'prop-types';
 

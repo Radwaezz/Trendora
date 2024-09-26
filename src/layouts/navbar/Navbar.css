@@ -133,13 +133,21 @@
     flex-direction: column;
     align-items: center;
     overflow: auto;
-    transition: max-height 0.3s ease-out;
+    /* transition: max-height 0.3s ease-out; */
+    max-height: 0; /* Initially hidden */
+  opacity: 0; /* Start fully transparent */
+  transition: max-height 0.10s ease-in-out, opacity 0.10s ease-in-out; /* Slow transition */
+    
     z-index: 2000;
   }
 
   .nav-links.nav-active {
-    max-height: 300px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* max-height: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    max-height: 300px; /* Set height to show content */
+  opacity: 1; /* Fully visible */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
   }
  
 
@@ -163,6 +171,8 @@
     transition: right 0.3s ease;
     z-index: 2000;
     overflow-y: auto; 
+
+    transition: right 0.6s ease; /* Slower transition duration */
   }
 }
 

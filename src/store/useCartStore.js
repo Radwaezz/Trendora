@@ -28,7 +28,16 @@ const useCartStore = create((set, get) => ({
       });
     }
   },
-
+  updateItemQuantity: (id, delta) => {
+    set(state => {
+      const updatedCart = state.cart.map(item =>
+        item.id === id
+          ? { ...item, quantity: Math.max(item.quantity + delta, 1) } // Ensure quantity is at least 1
+          : item
+      );
+      return { cart: updatedCart };
+    });
+  },
   removeFromCart: (id) => set({
     cart: get().cart.filter(item => item.id !== id),
   }),

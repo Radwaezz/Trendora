@@ -1,5 +1,5 @@
 import ScrollToTop from 'react-scroll-to-top';
-import logo from '../../public/images/furniro.png'; 
+import logo from '/images/furniro.png'; 
 
 const ScrollToTopButton = () => {
   return (

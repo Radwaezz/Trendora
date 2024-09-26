@@ -1,8 +1,8 @@
 
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'; 
-import useCartStore from '../store/useCartStore';
-import Delete from '../../public/icons/trash-043182f4.svg'; 
+import useCartStore from '../../store/useCartStore';
+import Delete from '/icons/trash-043182f4.svg'; 
 import './Cart.css';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'; 

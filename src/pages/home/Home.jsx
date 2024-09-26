@@ -2,10 +2,10 @@
 import  { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Home.css';
-import homeImage from '../../public/images/ele.jfif';
-import imageOne from '../../public/images/acc.jfif';
-import imageThree from '../../public/images/men.jfif';
-import imageTwo from '../../public/images/women.jfif';
+import homeImage from '/images/ele.jfif';
+import imageOne from '/images/acc.jfif';
+import imageThree from '/images/men.jfif';
+import imageTwo from '/images/women.jfif';
 
 
 function Home() {

@@ -4,7 +4,7 @@
 
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import useCartStore from '../store/useCartStore';
+import useCartStore from '../../store/useCartStore';
 import './WishList.css';
 
 function WishList() {

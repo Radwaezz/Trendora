@@ -5,7 +5,7 @@
 import { useState } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 import { useNavigate } from 'react-router-dom';
-import useCartStore from '../store/useCartStore';
+import useCartStore from '../../store/useCartStore';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup'; 
 import './Checkout.css';

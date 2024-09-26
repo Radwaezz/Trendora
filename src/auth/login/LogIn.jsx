@@ -3,7 +3,7 @@ import './LogIn.css';
 import { useNavigate, Link } from 'react-router-dom'; // Import Link
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import logIn from '../../../public/images/home-hero-bg-887bfdde.png';
+import logIn from '/images/home-hero-bg-887bfdde.png';
 
 // Define validation schema using Yup
 const validationSchema = Yup.object({

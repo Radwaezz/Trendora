@@ -4,14 +4,14 @@ import './Shop.css';
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
-import Share from '../../public/icons/share.svg';
-import HeartEmpty from '../../public/icons/heart-empty.svg';
-import HeartFilled from '../../public/icons/heart-fill.svg';
+import Share from '../../../public/icons/share.svg';
+import HeartEmpty from '../../../public/icons/heart-empty.svg';
+import HeartFilled from '../../../public/icons/heart-fill.svg';
 
 import 'react-toastify/dist/ReactToastify.css';
-import useCartStore from '../store/useCartStore'; // استخدم useCartStore فقط
-import FilterBar from '../componants/FilterBar/FilterBar';
-import CartDropdown from '../componants/CartDropdown/CartDropdown'; // Import the CartDropdown component
+import useCartStore from '../../store/useCartStore'; // استخدم useCartStore فقط
+import FilterBar from '../../componants/FilterBar/FilterBar';
+import CartDropdown from '../../componants/CartDropdown/CartDropdown'; // Import the CartDropdown component
 
 
 function Shop() {
