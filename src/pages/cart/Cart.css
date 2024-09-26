@@ -228,12 +228,13 @@ th {
 /* Medium Screens */
 @media (min-width: 769px) and (max-width: 900px) {
     .container {
-        /* flex-direction: column; */
+        flex-direction: column;
     }
 
     .cart-items {
         width: 100%;
         padding: 20px;
+        
     }
 
     .cart-totals {
@@ -252,4 +253,33 @@ th {
         padding: 10px;
         border-bottom: 1px solid #ddd;
     }
+}
+@media screen and (max-width: 480px) {
+    .product-image{
+       transform: translate(-20%, -20%);
+    }
+    .product{
+        transform: translate(-5%);
+    }
+    .product-price{
+        transform: translate(-5%);
+    }
+    .quantity-td{
+        transform: translate(-12%);
+    }
+    .subtotal-td{
+        transform: translate(-6%);
+    }
+    td:nth-child(5) {
+        position: relative; /* Set position relative to allow absolute positioning of ::before */
+      }
+      
+      td:nth-child(5)::before {
+        content: "Action";
+        position: absolute; /* Position it absolutely */
+        left: 0; /* Align to the left */
+        top: 50%; /* Center vertically */
+        transform: translateY(-50%); /* Adjust for perfect vertical centering */
+      }
+      
 }

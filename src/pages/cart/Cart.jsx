@@ -54,7 +54,7 @@ function Cart() {
   };
 
   const handleCheckout = () => {
-    navigate('/checkout'); // Redirect to the Checkout page
+    navigate('/checkout'); 
   };
 
   // Calculate subtotal by summing up item price * quantity
@@ -76,7 +76,7 @@ function Cart() {
               <th>Price</th>
               <th>Quantity</th>
               <th>Subtotal</th>
-              <th></th>
+              <th ></th>
             </tr>
           </thead>
           <tbody>
@@ -91,7 +91,7 @@ function Cart() {
                   </td>
                   <td className="product-price">${item.price.toFixed(2)}</td>
                   <td className='quantity-td'>{item.quantity}</td>
-                  <td >${(item.price * item.quantity).toFixed(2)}</td>
+                  <td className='subtotal-td' >${(item.price * item.quantity).toFixed(2)}</td>
                   <td>
                     {loadingId === item.id ? (
                       <span className="spinner">Loading...</span> // Spinner or loading text
