@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@stripe/react-stripe-js": "^2.8.0",
+    "@stripe/react-stripe-js": "^2.8.1",
     "@stripe/stripe-js": "^4.4.0",
     "express": "^4.19.2",
     "formik": "^2.4.6",
